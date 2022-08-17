@@ -1,28 +1,30 @@
 ---
-import '../styles/style.css'
+import "../styles/style.css";
+
+import Footer from "../components/Footer.astro";
 
 const { title } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <title>{title} - kennycallado</title>
 
-<head>
-  <title>{title} - kennycallado</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="kennycallado" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width" />
 
-  <meta charset="utf-8" />
-  <meta name="author" content="kennycallado" />
-  <meta name="generator" content={Astro.generator} />
-  <meta name="viewport" content="width=device-width" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Neonderthaw&display=swap"
+    />
+  </head>
 
-<body>
-  <slot />
+  <body>
+    <slot />
 
-  <footer>
-    <p class="text-center" style="word-spacing: 1rem;">
-      Made with 💛 and powered by <a class=" text-warning" href="https://astro.build"> Astro</a> 🚀
-    </p>
-  </footer>
-</body>
-
+    <Footer />
+  </body>
 </html>

@@ -1,0 +1,95 @@
+---
+const hola = "hola";
+---
+
+<section class="relative bg-indigo-900">
+  <img
+    src="/hero_background.png"
+    class="absolute h-full inset-0 object-center object-cover w-full"
+  />
+  <div class="relative container mx-auto pb-96 pt-44 px-4">
+    <div class="flex flex-wrap -mx-4">
+      <div class="mx-auto text-center lg:w-8/12">
+        <h1 class="mb-4 text-7xl md:text-8xl lg:text-9xl">Kennycallado</h1>
+        <h2
+          class="text-right text-3xl md:text-4xl lg:text-5xl md:mr-5 lg:-mr-5 xl:mr-20 2xl:mr-40"
+        >
+          Web Developer
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h1 {
+    color: #f0f;
+    text-align: center;
+    font-family: "Neonderthaw", sans-serif;
+
+    /* text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+
+  h2 {
+    font-family: "Neonderthaw", sans-serif;
+    color: #f9f;
+    text-shadow: 0 0 0 #f5f, 0 0 20px #f9f, 0 0 40px #f0f, 0 0 60px #f0f,
+      0 0 10px #f0f, 0 0 98px #f0f;
+  }
+
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: rgba(255, 255, 255, 0.4);
+      text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      /* color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+      text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+        0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #f0f;
+    }
+  }
+
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: rgba(255, 255, 255, 0.4);
+      text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      /* color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+      text-shadow: 0 0 5px #f0f, 0 0 15px #f0f, 0 0 20px #f0f, 0 0 40px #f0f,
+        0 0 60px #f0f, 0 0 10px #f0f, 0 0 98px #f0f;
+      color: #faf;
+    }
+  }
+</style>
