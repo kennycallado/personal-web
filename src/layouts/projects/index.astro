@@ -1,0 +1,23 @@
+---
+import "../../styles/style.css";
+
+import Footer from "../../components/Footer.astro";
+import Navbar from "../../components/layout/Navbar.astro";
+import Head from "../../components/layout/Head.astro";
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <Head title={title} />
+  </head>
+
+  <body>
+    <Navbar />
+    <slot />
+
+    <Footer />
+  </body>
+</html>
