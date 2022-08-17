@@ -1,3 +1,27 @@
-.text-justify {
-  text-align: justify;
+/*
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+
+
+/*
+@layer components {
+  .btn {
+    @apply font-semibold rounded rounded py-2 px-4
+  }
+
+  .btn-primary {
+    @apply bg-indigo-700 text-white
+  }
+
+  .btn-out-primary {
+    @apply border-2 border-indigo-700 text-indigo-800
+  }
+
+
+  .btn-out-primary:hover {
+    @apply border-2 border-pink-500 text-pink-500 bg-indigo-700 transition-colors
+  }
 }
+*/
