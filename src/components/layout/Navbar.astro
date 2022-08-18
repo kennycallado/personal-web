@@ -9,11 +9,13 @@ const hola = "hola";
     class="flex flex-grow items-center max-w-7xl w-full lg:space-x-4 lg:space-y-0 lg:w-auto"
   >
     <!-- brand  -->
-    <span
+    <a
+      href="/"
+      id="nav-brand"
       class="bg-gray-100 bg-opacity-5 mr-auto lg:-mt-3 text-indigo-600 text-3xl md:text-4xl lg:text-5xl"
     >
       Kennycallado
-    </span>
+    </a>
     <!-- enlaces  -->
     <div class="flex flex-row ml-auto lg:flex-row lg:mr-auto lg:pt-0">
       <a
@@ -23,7 +25,7 @@ const hola = "hola";
         Sobre mí
       </a>
       <a
-        href="#"
+        href="/projects"
         class="text-sm sm:text-base px-3 py-2 ml-3 bg-gray-100 font-semibold text-indigo-600 hover:text-pink-500 outline rounded hover:shadow-md hover:shadow-pink-500 transition-colors transition-shadow"
       >
         Proyectos
@@ -33,7 +35,7 @@ const hola = "hola";
 </nav>
 
 <style>
-  span {
+  #nav-brand {
     font-family: "Neonderthaw", monospace;
   }
 
