@@ -18,7 +18,7 @@ function debug(t: string): void {
 
 > Está muy orientado para programadores
 
-![Imagen-1](/hero_background.png)
+![Imagen-1](/hero_background.jpg)
 
 > It looks amazing!!
 
