@@ -3,7 +3,8 @@
 name: build-push-action
 
 on:
-  release: [published]
+  release:
+    types: [published]
   # push:
   #   branches:
   #     - 'actions-build'
