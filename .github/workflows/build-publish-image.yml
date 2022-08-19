@@ -3,10 +3,10 @@
 name: build-push-action
 
 on:
-  #release: [publish]
-  push:
-    branches:
-      - 'actions-build'
+  release: [published]
+  # push:
+  #   branches:
+  #     - 'actions-build'
 
 jobs:
   docker:
@@ -18,14 +18,11 @@ jobs:
       -
         name: Set up Node
         uses: actions/setup-node@v3
+      # TODO: Serviría para generar imágen latest y version
       # -
       #   name: Get npm package version
       #   id: build-version
       #   uses: martinbeentjes/npm-get-version-action@main
-      -
-        name: Get the version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       -
         name: Install dependencies
         run: npm install
@@ -51,5 +48,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm
           push: true
-          tags: kennycallado/personal-web_dev:latest,kennycallado/personal-web_dev:${{ steps.get_version.outputs.VERSION }}
-          # tags: kennycallado/personal-web_dev:{{ steps.build-version.outputs.current-version }}
+          tags: kennycallado/personal-web:latest
