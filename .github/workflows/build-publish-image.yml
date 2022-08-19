@@ -3,7 +3,7 @@
 name: build-push-action
   push:
     branches:
-      - 'dev'
+      - 'actions-build'
 
 jobs:
   docker:
