@@ -3,6 +3,7 @@
 name: build-push-action
 
 on:
+  #release: [publish]
   push:
     branches:
       - 'actions-build'
@@ -17,6 +18,10 @@ jobs:
       -
         name: Set up Node
         uses: actions/setup-node@v3
+      # -
+      #   name: Get npm package version
+      #   id: build-version
+      #   uses: martinbeentjes/npm-get-version-action@main
       -
         name: Install dependencies
         run: npm install
@@ -40,6 +45,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/arm
           push: true
-          tags: kennycallado/personal-web_dev:latest
+          tags: kennycallado/personal-web_dev:latest,kennycallado/personal-web_dev:{{ GITHUB_REF.refs.tags }}
+          # tags: kennycallado/personal-web_dev:{{ steps.build-version.outputs.current-version }}
