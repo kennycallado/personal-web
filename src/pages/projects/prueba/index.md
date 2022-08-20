@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/projects/show.astro
+layout: ../../../layouts/projects/Show.astro
 title: Prueba
 ---
 
@@ -35,3 +35,4 @@ function debug(t: string): void {
 </div>
 
 [Volver](/projects)
+

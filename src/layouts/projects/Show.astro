@@ -1,0 +1,34 @@
+---
+import "../../styles/style.css";
+
+import Head from "../../components/layout/Head.astro";
+import Navbar from "../../components/layout/Navbar.astro";
+import Footer from "../../components/layout/Footer.astro";
+
+const { title } = Astro.props.frontmatter;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <Head title={title} />
+  </head>
+
+  <body>
+    <Navbar />
+
+    <article
+      class="pb-10 pt-20 bg-gradient-to-b from-pink-100 via-indigo-200 to-indigo-400"
+    >
+      <div class="md:mx-10 lg:mx-20 bg-gray-100 rounded shadow-xl">
+        <div
+          class="px-2 md:px-0 py-10 container mx-auto prose lg:prose-xl xl:prose-2xl prose-headings:text-indigo-600 prose-p:text-justify prose-a:text-indigo-500 prose-a:font-bold hover:prose-a:text-pink-500"
+        >
+          <slot />
+        </div>
+      </div>
+    </article>
+
+    <Footer />
+  </body>
+</html>
