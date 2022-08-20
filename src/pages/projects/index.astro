@@ -1,27 +1,26 @@
 ---
-import Layout from '../../layouts/projects/index.astro'
-import Header from '../../components/layout/Header.astro'
+import Layout from "../../layouts/projects/index.astro";
+import Header from "../../components/layout/Header.astro";
 
 const lista = [
-  {title: "Proyecto 1", path: "/projects/prueba", image: "blabla"},
-  {title: "Proyecto 2", path: "/projects/project_2", image: "blabla"},
-]
+  { title: "Proyecto 1", path: "/projects/prueba", image: "blabla" },
+  { title: "Proyecto 2", path: "/projects/project_2", image: "blabla" },
+];
 ---
 
 <Layout title="Projects">
-
   <Header name="Projects" />
 
   <main class="container mx-auto">
     <p>Aquí encontrará una lista de los proyectos ordenados en tarjetas:</p>
     <ul>
       {
-        lista.map(project => <li>
-            <a href="{project.path}">{project.title}</a>
+        lista.map((project) => (
+          <li>
+            <a href={project.path}>{project.title}</a>
           </li>
-        )
+        ))
       }
     </ul>
-
   </main>
 </Layout>
