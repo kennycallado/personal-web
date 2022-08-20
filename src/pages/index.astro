@@ -1,5 +1,5 @@
 ---
-import HomeLayout from "../layouts/HomeLayout.astro";
+import Layout from "../layouts/HomeLayout.astro";
 
 import Hero from "../components/home/Hero.astro";
 import Navbar from "../components/layout/Navbar.astro";
@@ -7,7 +7,7 @@ import Welcome from "../components/home/Welcome.astro";
 import IntroBlog from "../components/home/IntroBlog.astro";
 ---
 
-<HomeLayout title="Home">
+<Layout title="Home">
   <header>
     <Hero />
   </header>
@@ -20,4 +20,4 @@ import IntroBlog from "../components/home/IntroBlog.astro";
       <IntroBlog />
     </div>
   </main>
-</HomeLayout>
+</Layout>

@@ -3,4 +3,9 @@ const { name } = Astro.props;
 ---
 
 <!-- Servirá para unificar estilos de los headers -->
-<h1 class="mb-5 text-center text-indigo-700 text-5xl">{name}</h1>
+<hgroup
+  class="py-10 md:mx-10 lg:mx-20 bg-gray-100 rounded shadow-xl bg-gray-100"
+>
+  <h1 class="pt-10 mb-5 text-center text-indigo-700 text-5xl">{name}</h1>
+  <h2 class="text-center text-gray-500 text-xl">Probando probando</h2>
+</hgroup>
