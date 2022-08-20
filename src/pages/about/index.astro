@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/MainLayout.astro";
+import Header from "../../components/layout/Header.astro";
+---
+
+<Layout title="About">
+  <div
+    class="pb-10 bg-gradient-to-b from-pink-100 via-indigo-200 to-indigo-400"
+  >
+    <Header name="Sobre mí" />
+
+    <div class="mt-10 md:mx-10 lg:mx-20 bg-gray-100 rounded shadow-xl">
+      <article
+        class="px-2 md:px-0 py-10 container mx-auto prose lg:prose-xl xl:prose-2xl prose-headings:text-indigo-600 prose-p:text-justify prose-a:text-indigo-500 prose-a:font-bold hover:prose-a:text-pink-500"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </p>
+      </article>
+    </div>
+  </div>
+</Layout>
