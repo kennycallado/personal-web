@@ -2,9 +2,17 @@
 import Layout from "../../layouts/projects/Index.astro";
 import Header from "../../components/layout/Header.astro";
 
-const lista = [
-  { title: "Proyecto 1", path: "/projects/prueba", image: "blabla" },
-  { title: "Proyecto 2", path: "/projects/project_2", image: "blabla" },
+interface project {
+    title: string,
+    path: string,
+    description: string,
+    icon: string
+  }
+
+const lista: project[] = [
+  { title: "Proyecto 1", path: "/projects/prueba", description: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.", icon: "blabla" },
+  { title: "Proyecto 2", path: "/projects/project_2", description: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.", icon: "blabla" },
+  { title: "Proyecto 2", path: "/projects/project_2", description: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.", icon: "blabla" },
 ];
 ---
 
@@ -12,26 +20,23 @@ const lista = [
   <div
     class="pb-10 bg-gradient-to-b from-pink-100 via-indigo-200 to-indigo-400"
   >
-    <Header name="Projects" />
+    <Header name="Proyectos">
+      <h2 class="text-center text-gray-500 text-xl">Descubre en qué ando metido! 🤓</h2>
+    </Header>
 
     <div class="mt-10 md:mx-10 lg:mx-20 bg-gray-100 rounded shadow-xl">
       <main
-        class="px-2 md:px-0 py-10 container mx-auto prose lg:prose-xl xl:prose-2xl prose-headings:text-indigo-600 prose-p:text-justify prose-a:text-indigo-500 prose-a:font-bold hover:prose-a:text-pink-500"
+        class="px-2 md:px-0 py-10 container mx-auto prose lg:prose-xl prose-headings:text-indigo-600 prose-p:text-justify prose-a:text-indigo-500 prose-a:font-bold hover:prose-a:text-pink-500"
       >
-        <p>Aquí encontrará una lista de los proyectos ordenados en tarjetas:</p>
-        <p>Creo que aquí no puedo usar estilos de prose</p>
-        <p>Quizá sí y poner las tarjetas dentro normalmente...</p>
-        <ul>
+
+      <p>
+        ¿Cuantos proyectos pondré? Creo que tres para empzar y luego quizá más. De todas formas hago un grid y tarjetas dinámicas a partir de los ficheros.
+      </p>
+      
+      <article class="grid grid-cols-2 gap-4 justify-center">
           {
             lista.map((project) => (
-              <li>
-                <a href={project.path}>{project.title}</a>
-              </li>
-            ))
-          }
-        </ul>
-
-        <!-- Ejemplo de tarjeta -->
+<!-- Card -->
         <div
           class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
         >
@@ -48,22 +53,21 @@ const lista = [
               d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"
             ></path>
           </svg>
-          <a href="#">
+
             <h5
               class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"
             >
-              Need a help in Claim?
+              {project.title}
             </h5>
-          </a>
+
           <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
-            Go to this step by step guideline process on how to certify for your
-            weekly benefits:
+            {project.description}
           </p>
           <a
-            href="#"
+            href={project.path}
             class="inline-flex items-center text-blue-600 hover:underline"
           >
-            See our guideline
+            Saber más
             <svg
               class="ml-2 w-5 h-5"
               fill="currentColor"
@@ -77,6 +81,11 @@ const lista = [
             </svg>
           </a>
         </div>
+<!-- End Card -->
+            ))
+          }
+          </article>
+
       </main>
     </div>
   </div>
