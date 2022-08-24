@@ -14,5 +14,8 @@
     "@astrojs/tailwind": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
     "astro": "^1.0.5"
+  },
+  "dependencies": {
+    "astro-icon": "^0.7.3"
   }
 }
