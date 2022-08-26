@@ -43,10 +43,10 @@ const lista: project[] = (await Astro.glob("../projects/*.md")).map(
           ficheros.
         </p>
 
-        <article class="grid grid-cols-2 gap-4 justify-center">
+        <article class="md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
           {
             lista.map((project) => (
-              <div class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+              <div class="mx-auto p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <Icon
                   class="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400"
                   name={project.icon}
