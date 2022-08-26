@@ -52,14 +52,16 @@ const lista: project[] = (await Astro.glob("../projects/*.md")).map(
                   name={project.icon}
                 />
 
-                <h5 class="mb-2 text-2xl font-semibold text-center tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-3xl font-semibold text-center tracking-tight text-gray-900 dark:text-white">
                   {project.title}
                 </h5>
 
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
                   {project.description}
                 </p>
-                <hr class="m-1 border-gray-500 dark:border-gray-400" />
+
+                <hr class="border-gray-500 dark:border-gray-400" style="margin: 10px 0;" />
+
                 <a
                   href={project.url}
                   class="inline-flex items-center text-blue-600 hover:underline"
