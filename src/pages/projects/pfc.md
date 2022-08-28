@@ -9,7 +9,7 @@ icon: fxemoji:rocket
 
 # PFC - sensacion
 
-<!-- incluir una imagen de la web -->
+![image-1](/projects/pfc/image-1.png)
 
 ## Preámbulo
 
@@ -48,7 +48,7 @@ Para este proyecto se han usado las siguientes tecnologías:
 
 En la raíz se puede observar observar la estructura de directorios típica de un sitio web estático, sin embargo, el directorio `angular` contiene una sección del sitio que incluye este framework para generar un entorno dinámico e interactivo, donde el usuario podrá consultar la disponibilidad e incluso reservar una mesa.
 
-<!-- Incluir imagen haciendo una reserva -->
+![image-2](/projects/pfc/image-2.png)
 
 ## Servidor
 
@@ -56,7 +56,7 @@ He usado el lenguaje de programación _Rust_ para crear _back-end_. Es un lengua
 
 Para la conexión con la base de datos y las consultas a esta he usado la librearía _Diesel_. Esta ha sido una de las partes más complejas por lo diferente que es este _ORM_ en comparación con el resto. En realidad está más orientado a ser un _query builder,_ por lo que ha sido un pequeño cambio de paradigma acostumbrado a realizar las consultas manualmente o usando soluciones tipo _Doctrine_ para _php_.
 
-<!-- Incluir una imagen con código rust -->
+![image-3](/projects/pfc/image-3.png)
 
 ## Otros
 
@@ -64,13 +64,13 @@ Ambas módulos de la aplicación incluyen un ficheros `Dockerfile` que sirven pa
 
 Sobre esta segunda parte destacar que he tenido en cuenta muchas consideraciones específicas ya que la idea es desplegar la aplicación sobre una _raspberry pi_ y no sobre un servidor de cloud. Las cuestiones más importantes han sido la arquitectura _arm64_ del hardware donde se ejecutará y la imagen usada sin librerías libc requeridas por el framework. Mas [detalles](https://github.com/kennycallado/PFC-server/tree/4bac75490841cd5f4427724f52cd878780f33c06) en el README del repositorio.
 
-<!-- Incluir una imagen de hub.docker.com -->
+![image-4](/projects/pfc/image-4.png)
 
 ## Despliegue
 
 Como resultado se ha generado una imagen de _docker_ para la interfaz de usuario, otra imagen para el servidor de comunicación con la base de datos. Estas imágenes se distribuyen públicamente gracias al servicio de [docker hub](https://hub.docker.com). Y finalmente la aplicación es desplegada sobre un servidor de _kubernetes_ instalado en una _raspberry pi_. _Kubernetes_ obtiene dichas imágenes y las provee de los recursos necesarios para que la aplicación en su conjunto funcione correctamente.
 
-<!-- Incluir una imagen de kubectl -n pfc get all `o algo parecido` -->
+![image-5](/projects/pfc/image-5.png)
 
 ## Conclusión
 
