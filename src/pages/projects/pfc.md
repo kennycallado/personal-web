@@ -20,7 +20,7 @@ Este proyecto describe la creación de una sencilla aplicación web _full-stack_
 - Conexión con base de datos
 - Despliegue sobre kubernetes
 
-También se incluye la memoria del proyecto así como otros elementos, ya que el proyecto final de ciclo que presenté para el curso de DAW. En dicha memoria y en su presentación se cita el estado previo del proyecto, siendo este una web estática sencilla que incluye bootstrap para los estilos, que realicé previamente para una de las asignaturas. Desde este punto se ha generado todo el resto de infraestructura formando una aplicación interactiva y funcional que permite a los usuarios informarse sobre el restaurante y realizar reservas.
+También se incluye la memoria del proyecto así como otros elementos, ya que es el proyecto final de ciclo que presenté para el curso de DAW. En dicha memoria y en su presentación se cita el estado previo del proyecto, siendo este una web estática sencilla que incluye bootstrap para los estilos, que realicé previamente para una de las asignaturas. Desde este punto se ha generado todo el resto de infraestructura formando una aplicación interactiva y funcional que permite a los usuarios informarse sobre el restaurante y realizar reservas.
 
 Para este proyecto se han usado las siguientes tecnologías:
 
