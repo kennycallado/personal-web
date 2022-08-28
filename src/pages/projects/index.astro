@@ -38,10 +38,12 @@ const lista: project[] = (await Astro.glob("../projects/*.md")).map(
         class="px-2 md:px-0 py-10 container mx-auto prose lg:prose-xl xl:prose-2xl 2xl:max-w-5xl prose-headings:text-indigo-600 prose-p:text-justify prose-a:text-indigo-500 prose-a:font-bold hover:prose-a:text-pink-500"
       >
         <p>
-          ¿Cuantos proyectos pondré? Creo que tres para empzar y luego quizá
-          más. De todas formas hago un grid y tarjetas dinámicas a partir de los
-          ficheros.
+          Aquí encontrarás algunos de los proyectos en los que he trabajando
+          últimamente. Desde una sencilla aplicación <em>php</em> para administrar
+          un blog, hasta mi proyecto fin de ciclo.
         </p>
+
+        <hr class="mt-0 border-gray-500" />
 
         <article class="md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
           {
@@ -60,7 +62,10 @@ const lista: project[] = (await Astro.glob("../projects/*.md")).map(
                   {project.description}
                 </p>
 
-                <hr class="border-gray-500 dark:border-gray-400" style="margin: 10px 0;" />
+                <hr
+                  class="border-gray-500 dark:border-gray-400"
+                  style="margin: 10px 0;"
+                />
 
                 <a
                   href={project.url}
