@@ -22,7 +22,7 @@ icon: ion:restaurant-outline
 - Conexión con base de datos
 - Despliegue sobre kubernetes
 
-También se incluye la memoria del proyecto así como otros elementos, ya que es el proyecto final de ciclo que presenté para el curso de DAW. En dicha memoria y en su presentación se cita el estado previo del proyecto, siendo este una web estática sencilla, que incluye bootstrap para los estilos, y que realicé previamente para una asignaturas. Desde este punto se ha generado todo el resto de infraestructura, formando una aplicación interactiva y funcional que permite a los usuarios informarse sobre el restaurante y realizar reservas.
+También se incluye la memoria del proyecto así como otros elementos, ya que es el proyecto final de ciclo que presenté para el curso de DAW. En dicha memoria y en su presentación se cita el estado previo del proyecto, siendo este una web estática sencilla, que incluye bootstrap para los estilos, y que realicé previamente para una asignatura. Desde este punto se ha generado todo el resto de infraestructura, formando una aplicación interactiva y funcional que permite a los usuarios informarse sobre el restaurante y realizar reservas.
 
 El repositorio de código está alojado en github. Puedes acceder al directorio principal desde el siguiente [enlace](https://github.com/kennycallado/PFC-root).
 
@@ -92,7 +92,7 @@ En la raíz se puede observar la estructura de directorios típica de un sitio w
 
 He usado el lenguaje de programación _Rust_ para crear el _back-end_. Es un lenguaje compilado el cual genera un binario que se ejecutará en el servidor. Sobre este lenguaje he usado el web framework _Rocket_. Este framework resulta muy sencillo una vez que conoces un poco el lenguaje y el rendimiento es impresionante. En algunas comparativas exponen que _express.js_ devuelve 22000 respuestas por segundo mientras que _rocker_ puede devolver hasta 70000 respuestas.
 
-Para la conexión con la base de datos y las consultas a esta he usado la librearía _Diesel_. Esta ha sido una de las partes más complejas por lo diferente que es este _ORM_ en comparación con el resto. En realidad está más orientado a ser un _query builder,_ por lo que ha sido un pequeño cambio de paradigma acostumbrado a realizar las consultas manualmente o usando soluciones tipo _Doctrine_ para _php_.
+Para la conexión con la base de datos y las consultas a esta he usado la librería _Diesel_. Esta ha sido una de las partes más complejas por lo diferente que es este _ORM_ en comparación con el resto. En realidad está más orientado a ser un _query builder,_ por lo que ha sido un pequeño cambio de paradigma acostumbrado a realizar las consultas manualmente o usando soluciones tipo _Doctrine_ para _php_.
 
 ![image-3](/projects/pfc/image-3.png)
 
@@ -100,7 +100,7 @@ Para la conexión con la base de datos y las consultas a esta he usado la librea
 
 ## Otros
 
-Ambos módulos de la aplicación incluyen un ficheros `Dockerfile` que sirve para generar la imagen de docker que será usada en producción. Para la interfaz he usado una imagen base con _nginx_, que sirve las páginas estáticas así como el build de angular para una ruta concreta. Por otro lado he usado una imagen de _busybox_ para el servidor, esta imagen es mucho más ligera y contiene todo lo necesario para ejecutar el servidor.
+Ambos módulos de la aplicación incluyen un `Dockerfile` que sirve para generar la imagen de docker que será usada en producción. Para la interfaz he usado una imagen base con _nginx_, que sirve las páginas estáticas así como el build de angular para una ruta concreta. Por otro lado he usado una imagen de _busybox_ para el servidor, esta imagen es mucho más ligera y contiene todo lo necesario para ejecutar el servidor.
 
 Sobre esta segunda parte destacar que he tenido en cuenta muchas consideraciones específicas ya que la idea es desplegar la aplicación sobre una _raspberry pi_ y no sobre un servidor de cloud. Las cuestiones más importantes han sido la arquitectura _arm64_ del hardware donde se ejecutará y la imagen usada sin librerías libc requeridas por el framework. Más [detalles](https://github.com/kennycallado/PFC-server/tree/4bac75490841cd5f4427724f52cd878780f33c06) en el README del repositorio.
 
