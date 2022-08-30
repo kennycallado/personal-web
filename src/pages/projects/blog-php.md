@@ -13,7 +13,7 @@ icon: file-icons:php
 
 ## Preámbulo
 
-Prueba de concepto de la implementación de un blog en _php_. Sigue el patrón _Modelo Vista Controlador_ para la organizar el código y usa core desarrollado durante el curso de _DAW_. Incluye algunas características para el despliegue integro sobre la plataforma _Heroku_, mientras que no se ha tenido en consideración los estilos de la interfaz de usuario.
+Prueba de concepto de la implementación de un blog en _php_. Sigue el patrón _Modelo Vista Controlador_ para la organizar el código y usa core desarrollado durante el curso de _DAW_. Incluye algunas características para el despliegue íntegro sobre la plataforma _Heroku_, mientras que no se ha tenido en consideración los estilos de la interfaz de usuario.
 
 El repositorio de código está alojado en github. Puedes acceder al directorio principal desde el siguiente [enlace](https://github.com/kennycallado/jubilant-octo-winner).
 
